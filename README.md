@@ -1,4 +1,4 @@
-# Task Manager
+# [Task Manager](https://rhuynh06.github.io/task-manager/)
 
 A lightweight, interactive React app for managing your daily tasks with real-time clock, progress tracking, editable tasks, localStorage persistence, and dark mode toggle.
 
