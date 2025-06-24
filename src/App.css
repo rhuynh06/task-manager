@@ -1,0 +1,205 @@
+/* Default light theme */
+:root {
+    --bg-color: #cce7ff;
+    --text-color: #333;
+    --task-bg: #ffffff;
+    --task-border: #80bfff;
+    --button-bg: #007bff;
+    --button-text: #fff;
+    --completed-text: #888;
+}
+
+/* Dark theme */
+.dark-theme {
+    --bg-color: #222;
+    --text-color: #fff;
+    --task-bg: #333;
+    --task-border: #555;
+    --button-bg: #ff9800;
+    --button-text: #222;
+    --completed-text: #bbb;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h2, h5 {
+    text-align: center;
+}
+
+.container {
+    max-width: 100%;
+    margin: auto;
+    padding: 20px;
+    background: var(--task-bg);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    min-width: 30vw;
+    min-height: 50vh;
+    max-width: 80vw;
+    max-height: 80vh;
+    overflow: auto;
+    word-break: break-word;
+}
+
+.task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--task-bg);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid var(--task-border);
+    border-radius: 5px;
+}
+
+.task span {
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+.task.completed span {
+    text-decoration: line-through;
+    color: var(--completed-text);
+}
+
+button {
+    background: var(--button-bg);
+    color: var(--button-text);
+    border: none;
+    padding: 5px 10px;
+    margin-left: 5px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid var(--task-border);
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: var(--button-bg);
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+    outline: none;
+}
+
+/* Theme toggle switch */
+.theme-toggle {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+.theme-toggle input {
+    display: none;
+}
+
+.theme-toggle label {
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+    background: var(--button-bg);
+    border-radius: 25px;
+    position: relative;
+    cursor: pointer;
+}
+
+.theme-toggle label::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: var(--task-bg);
+    border-radius: 50%;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    transition: 0.3s;
+}
+
+.theme-toggle input:checked + label::after {
+    left: 25px;
+}
+
+/* Add Task */
+.add-task-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.add-task-container input {
+    flex-grow: 1;
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid var(--task-border);
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.add-task-container input:focus {
+    border-color: var(--button-bg);
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+    outline: none;
+}
+
+.add-task-container button {
+    padding: 10px 20px;
+    background: var(--button-bg);
+    color: var(--button-text);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+.add-task-container button:hover {
+    opacity: 0.8;
+}
+
+/* progress bar */
+.progress-bar-container {
+    width: 100%;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 10px 0;
+    position: relative;
+}
+
+.progress-bar {
+    height: 20px;
+    background-color: #76c7c0;
+    transition: width 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.progress-score {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+}
