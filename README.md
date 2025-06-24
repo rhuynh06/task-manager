@@ -1,8 +1,32 @@
-# React + Vite
+# Task Manager
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A lightweight, interactive React app for managing your daily tasks with real-time clock, progress tracking, editable tasks, localStorage persistence, and dark mode toggle.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Task Tracking – Add, complete, edit, or delete tasks
+- Live Clock – Displays the current date and time in real-time
+- Persistent Storage – Tasks and theme preference are stored in `localStorage`
+- Dark Mode – Toggle between light and dark themes
+- Progress Bar – Visualize your task completion progress
+- Inline Editing – Click on a task to instantly edit it
+- Keyboard Shortcuts – Use `Enter` to add or confirm tasks
+
+## Technologies Used
+
+- React (Hooks: `useState`, `useEffect`)
+- JavaScript (ES6+)
+- CSS (Custom themes and transitions)
+- `localStorage` for persistence
+
+### Prerequisites
+
+Make sure you have **Node.js** and **npm** installed.
+
+### Installation
+
+```bash
+git clone https://github.com/rhuynh06/task-manager.git
+cd task-manager
+npm install
+npm run dev
